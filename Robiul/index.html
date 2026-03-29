@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robiul Islam | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <div class="container">
+        <nav>
+            <div class="logo">Robiul.Dev</div>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@skri2007" target="_blank">YouTube</a>
+                <a href="https://github.com/raizo101013" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/robiul-islam-48b267361" target="_blank">LinkedIn</a>
+            </div>
+        </nav>
+        
+        
+        
+        
+        
+        
+          
+        <button onclick="toggleGlobalProfile()" class="nav-cloud-btn">
+            ☁️ Robiul
+        </button>
+    </div>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        flex-wrap: wrap; /* Wraps on small screens */
+        gap: 15px;
+        position: relative;
+        z-index: 100; /* Keeps it on top */
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #c084fc; /* Purple Logo */
+    }
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    /* Standard Links */
+    .social-links a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+    }
+
+    /* Cloud Button Style */
+    .nav-cloud-btn {
+        background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+        color: #003366; /* Dark Blue Text */
+        border: none;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 800; /* Bold Text */
+        font-size: 0.9rem;
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(137, 247, 254, 0.4); /* Glow effect */
+        display: inline-block; /* Ensures it sits like a button */
+    }
+    
+    .nav-cloud-btn:active { transform: scale(0.95); }
+</style>
+
+
+
+
+
+
+
+<div id="global-profile" class="g-overlay" style="display: none;">
+    <div id="global-box" class="g-box">
+        <button onclick="toggleGlobalProfile()" class="top-close-btn">✕</button>
+        <img src="robiul10.png" alt="Robiul Islam" class="g-img">
+        <h2 class="g-name">Robiul Islam</h2>
+        <p class="g-role">Full Stack Developer</p>
+        <button onclick="toggleGlobalProfile()" class="big-close-btn">Close Profile</button>
+    </div>
+</div>
+
+<style>
+    /* Popup Styles */
+    .g-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(10, 10, 15, 0.98); z-index: 100000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+    .g-overlay.active { opacity: 1; }
+    .g-box { position: relative; width: 300px; padding: 40px 20px; background: rgba(255, 255, 255, 0.05); border-radius: 30px; text-align: center; transform: scale(0.9); opacity: 0; transition: all 0.4s; display: flex; flex-direction: column; align-items: center; }
+    .g-overlay.active .g-box { transform: scale(1); opacity: 1; }
+    .g-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #00d4ff; margin-bottom: 20px; }
+    .g-name { color: #fff; font-size: 2.2rem; margin: 0; }
+    .g-role { color: #00d4ff; margin: 5px 0 25px 0; letter-spacing: 2px; text-transform: uppercase; }
+    .top-close-btn { position: absolute; top: 15px; right: 15px; background: none; border: none; color: #666; font-size: 1.5rem; cursor: pointer; }
+    .big-close-btn { background: #333; color: #fff; border: 1px solid #555; padding: 12px 40px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+    /* Animation */
+    @keyframes cloudVanish { 0% { opacity: 1; transform: scale(1); filter: blur(0); } 100% { opacity: 0; transform: scale(1.2) translateY(-50px); filter: blur(20px); } }
+    .g-box.mist-exit { animation: cloudVanish 0.6s forwards ease-in-out; }
+</style>
+
+<script>
+    let isProfileOpen = false;
+    function toggleGlobalProfile() {
+        const overlay = document.getElementById('global-profile');
+        const box = document.getElementById('global-box');
+        if (!isProfileOpen) {
+            overlay.style.display = 'flex';
+            setTimeout(() => { overlay.classList.add('active'); }, 10);
+            document.body.style.overflow = 'hidden'; 
+            isProfileOpen = true;
+        } else {
+            box.classList.add('mist-exit'); 
+            setTimeout(() => {
+                overlay.classList.remove('active');
+                overlay.style.display = 'none';
+                box.classList.remove('mist-exit'); 
+                document.body.style.overflow = 'auto'; 
+                isProfileOpen = false;
+            }, 600);
+        }
+    }
+</script>
+
+
+
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+
+        <header class="hero">
+            <div class="hero-text">
+                <p>Hello, I am</p>
+                <h1>Robiul <span>Islam</span></h1>
+                <p>
+             Student & Full Stack Web Developer from West Bengal. 
+                    Passionate about building responsive websites and content creation.
+                </p>
+                <a href="mailto:robiulislam786786u@gmail.com" class="btn">Email Me</a>
+        </header>
+
+        <section>
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">🌐 HTML & CSS</div>
+                <div class="skill-card">⚡ JavaScript</div>
+                <div class="skill-card">🐍 Python</div>
+                <div class="skill-card">📱 Responsive Design</div>
+            </div>
+        </section>
+        
+        
+            
+            
+            
+            
+            
+            
+      
+
+
+
+
+
+
+
+
+
+<div id="global-profile" class="g-overlay" style="display: none;">
+    <div id="global-box" class="g-box">
+        <button onclick="toggleGlobalProfile()" class="top-close-btn">✕</button>
+        <img src="robiul10.png" alt="Robiul Islam" class="g-img">
+        <h2 class="g-name">Robiul Islam</h2>
+        <p class="g-role">Full Stack Developer</p>
+        <button onclick="toggleGlobalProfile()" class="big-close-btn">Close Profile</button>
+    </div>
+</div>
+
+<style>
+    /* Popup Styles */
+    .g-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(10, 10, 15, 0.98); z-index: 100000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+    .g-overlay.active { opacity: 1; }
+    .g-box { position: relative; width: 300px; padding: 40px 20px; background: rgba(255, 255, 255, 0.05); border-radius: 30px; text-align: center; transform: scale(0.9); opacity: 0; transition: all 0.4s; display: flex; flex-direction: column; align-items: center; }
+    .g-overlay.active .g-box { transform: scale(1); opacity: 1; }
+    .g-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 4px solid #00d4ff; margin-bottom: 20px; }
+    .g-name { color: #fff; font-size: 2.2rem; margin: 0; }
+    .g-role { color: #00d4ff; margin: 5px 0 25px 0; letter-spacing: 2px; text-transform: uppercase; }
+    .top-close-btn { position: absolute; top: 15px; right: 15px; background: none; border: none; color: #666; font-size: 1.5rem; cursor: pointer; }
+    .big-close-btn { background: #333; color: #fff; border: 1px solid #555; padding: 12px 40px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+    /* Animation */
+    @keyframes cloudVanish { 0% { opacity: 1; transform: scale(1); filter: blur(0); } 100% { opacity: 0; transform: scale(1.2) translateY(-50px); filter: blur(20px); } }
+    .g-box.mist-exit { animation: cloudVanish 0.6s forwards ease-in-out; }
+</style>
+
+<script>
+    let isProfileOpen = false;
+    function toggleGlobalProfile() {
+        const overlay = document.getElementById('global-profile');
+        const box = document.getElementById('global-box');
+        if (!isProfileOpen) {
+            overlay.style.display = 'flex';
+            setTimeout(() => { overlay.classList.add('active'); }, 10);
+            document.body.style.overflow = 'hidden'; 
+            isProfileOpen = true;
+        } else {
+            box.classList.add('mist-exit'); 
+            setTimeout(() => {
+                overlay.classList.remove('active');
+                overlay.style.display = 'none';
+                box.classList.remove('mist-exit'); 
+                document.body.style.overflow = 'auto'; 
+                isProfileOpen = false;
+            }, 600);
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <br><br>
+        <footer><p>© 2026 Robiul Islam</p></footer>
+    </div
+            <section>
+            <h2 class="section-title">Projects</h2>
+                        <div class="project-card">
+                <h3>3D Interactive Cube</h3>
+                <p>A fully interactive 3D scrolling world built with pure CSS3D and JavaScript.</p>
+                <a href="https://robiul3dcube.netlify.app/" target="_blank" class="btn project-btn">
+                    Play 3D Game 🎮
+                </a>
+            </div>
+            
+            
+            
+        
+
+<footer class="portfolio-footer">
+    ...
+
+            
+   <div id="finalWeatherModal" class="w-overlay" style="display: none !important;">
+    <div id="w-box" class="w-dashboard">
+        <div class="w-top-bar">
+            <span><i class="fa-solid fa-bolt"></i> Live Weather</span>
+            <button onclick="closeWeather()" style="color:#ff5555;">✕</button>
+        </div>
+
+        <div class="w-scroll-area">
+            
+            <div id="w-loading-msg" style="padding: 40px; text-align: center;">
+                <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; color: #00d4ff;"></i>
+                <p style="margin-top: 10px; color: #888;">Scanning Atmosphere...</p>
+            </div>
+
+            <div id="w-real-content" style="display: none;">
+                
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div class="w-pill"><i class="fa-solid fa-location-dot"></i> Chanchal, Malda</div>
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 10px;">
+                        <img id="w-icon" src="" style="width: 80px; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">
+                        <div style="text-align: left;">
+                            <h1 id="w-temp" style="font-size: 4rem; line-height: 1; margin: 0;">--°</h1>
+                            <div id="w-desc" style="color: #00d4ff; font-weight: bold; font-size: 1.1rem;">--</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-panel">
+                    <div style="font-size: 0.8rem; color: #888; margin-bottom: 10px;">
+                        <i class="fa-regular fa-clock"></i> 24-Hour Trend
+                    </div>
+                    <div style="position: relative; height: 120px; width: 100%; background: rgba(0,0,0,0.2); border-radius: 10px;">
+                        <canvas id="simpleChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="w-grid">
+                    <div class="w-box">
+                        <i class="fa-solid fa-droplet" style="color:#3b82f6;"></i>
+                        <div class="w-b-val"><span id="w-hum">--</span>%</div>
+                        <div class="w-b-lbl">Humidity</div>
+                    </div>
+                    <div class="w-box">
+                        <i class="fa-solid fa-wind" style="color:#a8a29e;"></i>
+                        <div class="w-b-val"><span id="w-wind">--</span> km/h</div>
+                        <div class="w-b-lbl">Wind</div>
+                    </div>
+                    <div class="w-box">
+                        <i class="fa-solid fa-sun" style="color:#facc15;"></i>
+                        <div class="w-b-val" id="w-uv">--</div>
+                        <div class="w-b-lbl">UV Index</div>
+                    </div>
+                    <div class="w-box">
+                        <i class="fa-solid fa-temperature-half" style="color:#f43f5e;"></i>
+                        <div class="w-b-val"><span id="w-feel">--</span>°</div>
+                        <div class="w-b-lbl">Real Feel</div>
+                    </div>
+                </div>
+
+                <div class="w-panel" style="margin-top: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                        <span style="font-size: 0.9rem; font-weight: bold;">
+                            <i class="fa-solid fa-lungs" style="color:#4ade80; margin-right:5px;"></i> 
+                            AQI: <span id="w-aqi-number" style="color: white; font-size: 1.1rem;">--</span>
+                        </span>
+                        <span id="w-aqi-text" style="color:#4ade80; font-size: 0.85rem;">Good</span>
+                    </div>
+                    <div style="width: 100%; height: 6px; background: #333; border-radius: 10px; overflow: hidden;">
+                        <div id="w-aqi-bar" style="height: 100%; width: 0%; background: #4ade80; transition: width 1s;"></div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid #222; font-size: 0.8rem; color: #666;">
+                    Developed by 
+                    <a href="https://Robiul120.netlify.app" target="_blank" style="color: #fff; text-decoration: none; font-weight: bold; margin-left: 3px; border-bottom: 2px solid #00d4ff; padding-bottom: 3px;">
+                        Robiul Islam
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .w-overlay {
+        position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.9); z-index: 9999999 !important;
+        display: flex; justify-content: center; align-items: center;
+        backdrop-filter: blur(8px);
+        transition: opacity 0.3s ease;
+    }
+    .w-dashboard {
+        width: 95%; max-width: 400px; height: 85vh;
+        background: #101010; border: 1px solid #333; border-radius: 24px;
+        display: flex; flex-direction: column; overflow: hidden;
+        font-family: sans-serif; color: white;
+        box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        opacity: 0; transform: translateY(50px);
+    }
+    .w-open { animation: slideUp 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .w-close { animation: slideDown 0.3s forwards cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+    .w-top-bar { padding: 15px 20px; background: #18181b; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; font-weight: bold; }
+    .w-top-bar button { background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+    
+    .w-scroll-area { flex: 1; overflow-y: auto; padding: 20px; }
+    .w-pill { display: inline-block; background: #222; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; color: #aaa; }
+    .w-panel { background: #1a1a1a; padding: 15px; border-radius: 16px; margin-bottom: 15px; border: 1px solid #333; }
+    .w-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .w-box { background: #1a1a1a; padding: 15px; border-radius: 16px; border: 1px solid #333; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+    .w-box i { font-size: 1.2rem; margin-bottom: 8px; }
+    .w-b-val { font-size: 1.4rem; font-weight: bold; margin-bottom: 2px; }
+    .w-b-lbl { font-size: 0.75rem; color: #777; }
+
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes slideDown { from { transform: translateY(0); opacity: 1; } to { transform: translateY(50px); opacity: 0; } }
+</style>
+
+<script>
+    function openSafeWeather() {
+        const overlay = document.getElementById('finalWeatherModal');
+        const box = document.getElementById('w-box');
+        overlay.style.setProperty('display', 'flex', 'important');
+        document.body.style.overflow = 'hidden';
+        box.classList.remove('w-close'); box.classList.add('w-open');
+        loadWeather();
+    }
+
+    function closeWeather() {
+        const overlay = document.getElementById('finalWeatherModal');
+        const box = document.getElementById('w-box');
+        box.classList.remove('w-open'); box.classList.add('w-close');
+        setTimeout(() => {
+            overlay.style.setProperty('display', 'none', 'important');
+            document.body.style.overflow = 'auto';
+        }, 300);
+    }
+
+    async function loadWeather() {
+        try {
+            const lat = 25.3860; const lon = 87.9944;
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m,apparent_temperature&hourly=temperature_2m&air_quality=us_aqi`;
+            const res = await fetch(url); const data = await res.json(); const cur = data.current;
+
+            document.getElementById('w-temp').innerText = Math.round(cur.temperature_2m) + "°";
+            document.getElementById('w-hum').innerText = cur.relative_humidity_2m;
+            document.getElementById('w-wind').innerText = Math.round(cur.wind_speed_10m);
+            document.getElementById('w-feel').innerText = Math.round(cur.apparent_temperature);
+            
+            const code = cur.weather_code;
+            let icon = "https://cdn-icons-png.flaticon.com/512/869/869869.png"; let desc = "Clear Sky";
+            if(code > 2) { icon = "https://cdn-icons-png.flaticon.com/512/1163/1163624.png"; desc = "Cloudy"; }
+            if(code > 50) { icon = "https://cdn-icons-png.flaticon.com/512/3351/3351979.png"; desc = "Rain"; }
+            document.getElementById('w-icon').src = icon;
+            document.getElementById('w-desc').innerText = desc;
+
+            const aqi = cur.us_aqi || 45;
+            document.getElementById('w-aqi-number').innerText = aqi;
+            document.getElementById('w-aqi-bar').style.width = Math.min(aqi, 100) + "%";
+            let aqiTxt = "Good"; let aqiColor = "#4ade80"; 
+            if(aqi > 50) { aqiTxt = "Moderate"; aqiColor = "#facc15"; }
+            if(aqi > 100) { aqiTxt = "Unhealthy"; aqiColor = "#f43f5e"; }
+            document.getElementById('w-aqi-text').innerText = aqiTxt;
+            document.getElementById('w-aqi-text').style.color = aqiColor;
+            document.getElementById('w-aqi-bar').style.background = aqiColor;
+
+            const h = new Date().getHours();
+            document.getElementById('w-uv').innerText = (h > 9 && h < 16) ? "High" : "Low";
+
+            document.getElementById('w-loading-msg').style.display = 'none';
+            document.getElementById('w-real-content').style.display = 'block';
+
+            setTimeout(() => { drawManualChart(data.hourly.temperature_2m.slice(0, 24)); }, 300);
+
+        } catch (e) { console.log(e); document.getElementById('w-loading-msg').innerText = "Connection Failed."; }
+    }
+
+    function drawManualChart(temps) {
+        const canvas = document.getElementById('simpleChart');
+        canvas.style.width = '100%'; canvas.style.height = '100%';
+        const ctx = canvas.getContext('2d');
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * dpr; canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+        const w = rect.width; const h = rect.height; const pad = 10;
+        const minT = Math.min(...temps) - 2; const maxT = Math.max(...temps) + 2;
+        ctx.clearRect(0,0,w,h);
+        ctx.beginPath(); ctx.strokeStyle = "#facc15"; ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        temps.forEach((t, i) => {
+            const x = (i / (temps.length - 1)) * (w - pad*2) + pad;
+            const y = h - ((t - minT) / (maxT - minT)) * (h - pad*2) - pad;
+            if(i===0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+        ctx.lineTo(w - pad, h); ctx.lineTo(pad, h);
+        ctx.fillStyle = "rgba(250, 204, 21, 0.1)"; ctx.fill();
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="project-card weather-card-style">
+    <div class="card-header">
+        <h3>Pro Weather App 🌦️</h3>
+    </div>
+    
+    <p class="card-desc">
+        A professional weather dashboard featuring a live 24-hour temperature graph, UV index, and air quality tracker. Built with the Open-Meteo API.
+    </p>
+
+    <button onclick="openSafeWeather()" class="purple-btn">
+        Check Live Weather ⚡
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="calcModal" class="calc-overlay" style="display: none !important;">
+    <div id="calc-box" class="calc-window">
+        
+        <div class="calc-header">
+            <div style="display:flex; gap:8px; align-items: center;">
+                <button onclick="cloudLoopAction()" class="pill-btn-cloud">☁️ Robiul</button>
+                <button onclick="toggleHistory()" class="pill-btn">HISTORY</button>
+                <button onclick="toggleSci()" id="sci-btn" class="pill-btn-blue">SCI ▾</button>
+            </div>
+            <button onclick="closeCalculator()" class="close-circle-btn">✕</button>
+        </div>
+
+        <div class="calc-body">
+            
+            <div id="dev-profile-panel" class="dev-overlay">
+                <img src="robiul10.png" alt="Robiul Islam" class="dev-img">
+                <div class="dev-text">
+                    <p>Developed By</p>
+                    <h2>Robiul Islam</h2>
+                </div>
+                <p style="color: #666; font-size: 0.8rem; margin-top: 20px;">Tap Cloud Button again to close</p>
+            </div>
+
+            <div id="calc-history-panel" class="history-view">
+                <div class="hist-top">
+                    <span onclick="clearHistory()" style="color: #ff5555; cursor: pointer;">Clear</span>
+                    <span style="color: white;">History Log</span>
+                    <span onclick="toggleHistory()" style="color: #00d4ff; cursor: pointer;">Done</span>
+                </div>
+                <div id="hist-list" class="hist-list"><div style="text-align:center; color: #555; margin-top:50px;">No history yet</div></div>
+            </div>
+
+            <div id="calc-main-view">
+                <div class="calc-screen">
+                    <div id="calc-top" class="calc-history"></div>
+                    <div id="calc-display" class="calc-main-display">0</div>
+                </div>
+
+                <div id="sci-panel" class="calc-grid-sci" style="display:none;">
+                    <button onclick="calcMath('sin')">sin</button><button onclick="calcMath('cos')">cos</button><button onclick="calcMath('tan')">tan</button><button onclick="calcMath('log')">log</button>
+                    <button onclick="calcMath('ln')">ln</button><button onclick="calcInput('(')">(</button><button onclick="calcInput(')')">)</button><button onclick="calcInput('2.71828')">e</button>
+                    <button onclick="calcMath('sqrt')">√</button><button onclick="calcMath('sq')">x²</button><button onclick="calcMath('fact')">x!</button><button onclick="calcInput('**')">^</button>
+                </div>
+
+                <div class="calc-keys">
+                    <button onclick="calcClear()" class="btn-red">AC</button><button onclick="calcDel()" class="btn-red">DEL</button><button onclick="calcInput('%')" class="btn-dark">%</button><button onclick="calcInput('/')" class="btn-blue">÷</button>
+                    <button onclick="calcInput('7')" class="btn-num">7</button><button onclick="calcInput('8')" class="btn-num">8</button><button onclick="calcInput('9')" class="btn-num">9</button><button onclick="calcInput('*')" class="btn-blue">×</button>
+                    <button onclick="calcInput('4')" class="btn-num">4</button><button onclick="calcInput('5')" class="btn-num">5</button><button onclick="calcInput('6')" class="btn-num">6</button><button onclick="calcInput('-')" class="btn-blue">−</button>
+                    <button onclick="calcInput('1')" class="btn-num">1</button><button onclick="calcInput('2')" class="btn-num">2</button><button onclick="calcInput('3')" class="btn-num">3</button><button onclick="calcInput('+')" class="btn-blue">+</button>
+                    <button onclick="calcInput('0')" class="btn-num btn-zero">0</button><button onclick="calcInput('.')" class="btn-num">.</button><button onclick="calcResult()" class="btn-equal">=</button>
+                </div>
+            </div>
+            
+            <div class="calc-footer">Developed by <a href="https://Robiul120.netlify.app" target="_blank">Robiul Islam</a></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Overlay */
+    .calc-overlay { position: fixed !important; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 9999999 !important; display: flex; justify-content: center; align-items: center; transition: opacity 0.2s ease-out; opacity: 0; pointer-events: none; }
+    .calc-overlay.active { opacity: 1; pointer-events: all; backdrop-filter: blur(5px); }
+
+    /* Window (FIXED HEIGHT + FLEX) */
+    .calc-window { 
+        width: 95%; max-width: 380px; 
+        max-height: 85vh; /* Stops it from growing too tall */
+        display: flex; flex-direction: column; /* Stacks header and body */
+        position: relative; background: #121212; border: 1px solid #333; border-radius: 24px; box-shadow: 0 50px 100px rgba(0,0,0,0.8); overflow: hidden; 
+        transform: scale(0.95) translateY(20px); opacity: 0; transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, filter 0.3s ease; 
+    }
+    .calc-overlay.active .calc-window { transform: scale(1) translateY(0); opacity: 1; }
+
+    /* Header (FIXED) */
+    .calc-header { padding: 15px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222; background: #1a1a1a; z-index: 45; flex-shrink: 0; }
+    
+    /* Body (SCROLLABLE) */
+    .calc-body { padding: 20px; position: relative; overflow-y: auto; flex: 1; }
+
+    /* Styles */
+    .pill-btn-cloud { background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); color: #003366; border: none; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; cursor: pointer; box-shadow: 0 0 10px rgba(137, 247, 254, 0.4); }
+    .pill-btn{background:#222;color:#fff;border:1px solid #333;padding:6px 12px;border-radius:20px;font-size:.75rem;font-weight:700;cursor:pointer}
+    .pill-btn-blue{background:#102a44;color:#60a5fa;border:1px solid #1e40af;padding:6px 12px;border-radius:20px;font-size:.75rem;font-weight:700;cursor:pointer}
+    .close-circle-btn{width:30px;height:30px;border-radius:50%;background:#222;border:1px solid #333;color:#ff5555;display:flex;justify-content:center;align-items:center;cursor:pointer}
+    .calc-screen{text-align:right;margin-bottom:20px;padding:15px;background:#000;border-radius:16px;border:1px solid #222}
+    .calc-history{height:20px;color:#666;font-size:.9rem;margin-bottom:5px}
+    .calc-main-display{color:#fff;font-size:3rem;font-weight:300;line-height:1}
+    .calc-grid-sci{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid #222;animation:slideDown.3s ease}
+    .calc-grid-sci button{height:40px;border-radius:10px;border:none;background:#1e1e1e;color:#00d4ff;font-weight:700;font-size:.9rem;cursor:pointer;transition:background.2s}
+    .calc-grid-sci button:active{background:#333}
+    .calc-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .calc-keys button{height:65px;border-radius:18px;border:none;font-size:1.4rem;font-weight:500;cursor:pointer;transition:transform.1s}
+    .calc-keys button:active{transform:scale(.95);filter:brightness(1.2)}
+    .btn-num{background:#2a2a2a;color:#fff}.btn-dark{background:#1f1f1f;color:#a1a1aa}.btn-red{background:#2f1515;color:#ff5555}.btn-blue{background:#102a44;color:#60a5fa}.btn-equal{background:#00d4ff;color:#000;font-weight:700}.btn-zero{grid-column:span 2}
+    .history-view{position:absolute;bottom:0;left:0;width:100%;height:85%;background:#18181b;z-index:10;border-radius:24px 24px 0 0;border-top:1px solid #333;transform:translateY(110%);transition:transform.3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:0 -20px 50px #000}
+    .history-view.show{transform:translateY(0)}
+    .hist-top{padding:15px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #333;background:#1f1f1f}
+    .hist-list{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:15px}.hist-item{text-align:right;border-bottom:1px solid #222;padding-bottom:10px}.hist-res{color:#00d4ff;font-size:1.5rem;font-weight:700}
+    .calc-footer{text-align:center;margin-top:25px;font-size:.8rem;color:#444}.calc-footer a{color:#00d4ff;text-decoration:none}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    
+    .dev-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(18, 18, 18, 0.98); backdrop-filter: blur(15px); z-index: 40; display: none; flex-direction: column; justify-content: center; align-items: center; animation: fadeIn 0.4s ease; }
+    .dev-img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 4px solid #00d4ff; box-shadow: 0 0 40px rgba(0, 212, 255, 0.4); margin-bottom: 20px; }
+    .dev-text { text-align: center; } .dev-text p { color: #888; font-size: 0.9rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; } .dev-text h2 { color: #fff; font-size: 2.2rem; margin: 5px 0 0 0; text-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+    @keyframes fastCloud { 0% { opacity: 1; transform: scale(1); filter: blur(0); } 100% { opacity: 0; transform: scale(1.15) translateY(-50px); filter: blur(20px); } }
+    .calc-window.cloud-exit { animation: fastCloud 0.5s forwards ease-in; pointer-events: none; }
+    
+    
+    
+    
+    
+    
+   <style>
+    /* ============================================================ */
+    /* ☁️ ULTIMATE CALMING GLASS THEME (Paste at bottom of HTML) ☁️ */
+    /* ============================================================ */
+
+    /* 1. GLOBAL GLASS VARIABLES */
+    :root {
+        --glass-bg: rgba(255, 255, 255, 0.1);   /* 10% White Transparency */
+        --glass-border: rgba(255, 255, 255, 0.3); /* Soft White Border */
+        --glass-blur: blur(25px);               /* Heavy Calming Blur */
+        --glass-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Soft Float Shadow */
+        --calm-radius: 30px;                    /* Very Curved Corners */
+    }
+
+    /* 2. TARGET ALL BOXES (Nav, Skills, Projects, Story, Contact) */
+    nav, 
+    .skill-card, 
+    .project-item,    /* The Weather/Calc/Store Cards */
+    .hero-text, 
+    .story-card,      /* If you have a class for story */
+    .contact-box, 
+    .w-dashboard,     /* Weather Popup */
+    .g-box,           /* Profile Popup */
+    .modal-box,
+    form input, 
+    form textarea {
+        background: var(--glass-bg) !important;
+        backdrop-filter: var(--glass-blur) !important;
+        -webkit-backdrop-filter: var(--glass-blur) !important; /* Safari Fix */
+        border: 1px solid var(--glass-border) !important;
+        border-radius: var(--calm-radius) !important;
+        box-shadow: var(--glass-shadow) !important;
+        color: white !important;
+        transition: transform 0.3s ease, background 0.3s ease !important;
+    }
+
+    /* 3. HOVER EFFECTS (Make them glow slightly) */
+    .skill-card:hover, .project-item:hover, nav:hover {
+        background: rgba(255, 255, 255, 0.2) !important; /* Brighter on hover */
+        transform: translateY(-5px);
+        border-color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    /* 4. NAVIGATION BAR SPECIFIC (Floating Pill Look) */
+    nav {
+        margin: 20px auto !important;     /* Floating Effect */
+        width: 90% !important;            /* Not full width */
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px !important;
+        position: sticky;
+        top: 20px;
+        z-index: 1000;
+    }
+
+    /* 5. TEXT STYLING (Calming & Readable) */
+    body, h1, h2, h3, p, a, span, label {
+        color: white !important;
+        text-shadow: 0 2px 15px rgba(0, 0, 0, 0.15) !important; /* Soft Shadow, No Harsh Black */
+        font-family: 'Poppins', sans-serif; /* Ensure smooth font */
+        letter-spacing: 0.5px;
+    }
+
+    /* Remove harsh backgrounds from specific inner elements */
+    .w-panel, .w-box, .w-top-bar {
+        background: transparent !important;
+        border: none !important;
+    }
+
+    /* 6. BUTTONS (Gradient Glass) */
+    button, .btn, .nav-cloud-btn {
+        background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)) !important;
+        border: 1px solid rgba(255,255,255,0.4) !important;
+        backdrop-filter: blur(10px);
+        color: white !important;
+        border-radius: 50px !important; /* Pill Shape */
+        box-shadow: 0 4px 15px rgba(255,255,255,0.1) !important;
+    }
+    
+    button:hover, .btn:hover {
+        background: white !important;
+        color: #333 !important; /* Dark text on hover */
+        box-shadow: 0 0 20px rgba(255,255,255,0.6) !important;
+    }
+
+    /* 7. FORCE GRID LAYOUT FIXES (If broken) */
+    .skills-grid, .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    /* 8. Fix the Story/Goals Section Blocks specifically */
+    /* Assuming they are in divs, let's target them if they have padding/bg */
+    section > div[style*="background"], section > div[class*="card"] {
+        background: var(--glass-bg) !important;
+        backdrop-filter: var(--glass-blur) !important;
+        border: 1px solid var(--glass-border) !important;
+        border-radius: var(--calm-radius) !important;
+    }
+
+</style>
+
+
+    
+
+
+
+
+</style>
+
+<script>
+    let currentInput = "0"; let historyLog = []; let cloudCounter = 0; 
+    function cloudLoopAction() { cloudCounter++; const b=document.getElementById('calc-box'),o=document.getElementById('calcModal'),d=document.getElementById('dev-profile-panel'); if(cloudCounter%2!==0){d.style.display='none';b.classList.add('cloud-exit');setTimeout(()=>{o.classList.remove('active');o.style.setProperty('display','none','important');document.body.style.overflow='auto';b.classList.remove('cloud-exit');},450);}else{d.style.display='flex';} }
+    function openCalculator() { const o=document.getElementById('calcModal'),b=document.getElementById('calc-box');document.getElementById('dev-profile-panel').style.display='none';o.style.setProperty('display','flex','important');requestAnimationFrame(()=>{o.classList.add('active');});document.body.style.overflow='hidden'; }
+    function closeCalculator() { const o=document.getElementById('calcModal');o.classList.remove('active');setTimeout(()=>{o.style.setProperty('display','none','important');document.body.style.overflow='auto';document.getElementById('dev-profile-panel').style.display='none';},250); }
+    function toggleHistory() { document.getElementById('calc-history-panel').classList.toggle('show'); renderHistory(); }
+    function toggleSci() { const p=document.getElementById('sci-panel'),b=document.getElementById('sci-btn');if(p.style.display==='none'){p.style.display='grid';b.innerText='HIDE ▴';b.style.background='#1e40af';}else{p.style.display='none';b.innerText='SCI ▾';b.style.background='#102a44';} }
+    function updateScreen(t="") { document.getElementById('calc-display').innerText=currentInput; if(t)document.getElementById('calc-top').innerText=t; }
+    function calcInput(v) { if(currentInput==="0" && v!==".") currentInput=v; else currentInput+=v; updateScreen(); }
+    function calcClear() { currentInput="0"; updateScreen(""); }
+    function calcDel() { currentInput=currentInput.length>1 ? currentInput.slice(0,-1) : "0"; updateScreen(); }
+    function calcMath(t) { try { let v=parseFloat(currentInput),r=0,s=""; if(t==='sqrt'){r=Math.sqrt(v);s=`√(${v})`;} if(t==='sq'){r=v*v;s=`${v}²`;} if(t==='fact'){r=fact(v);s=`${v}!`;} if(t==='sin'){r=Math.sin(v*Math.PI/180);s=`sin(${v})`;} if(t==='cos'){r=Math.cos(v*Math.PI/180);s=`cos(${v})`;} if(t==='tan'){r=Math.tan(v*Math.PI/180);s=`tan(${v})`;} if(t==='log'){r=Math.log10(v);s=`log(${v})`;} if(t==='ln'){r=Math.log(v);s=`ln(${v})`;} addHist(s,r); currentInput=fmt(r); updateScreen(s+" ="); } catch(e){currentInput="Error";updateScreen();} }
+    function fact(n) { if(n<0)return"Error"; if(n<2)return 1; let f=1; for(let i=2;i<=n;i++)f*=i; return f; }
+    function calcResult() { try{const o=currentInput;let e=currentInput.replace(/×/g,'*').replace(/÷/g,'/');let r=eval(e);addHist(o,r);currentInput=fmt(r);updateScreen(o+" =");}catch(e){currentInput="Error";updateScreen();} }
+    function fmt(n) { let s=n.toString(); if(s.includes('.'))return parseFloat(s).toFixed(5).replace(/\.?0+$/,""); return s; }
+    function addHist(e,r) { historyLog.unshift({e,r}); if(historyLog.length>15)historyLog.pop(); }
+    function renderHistory() { const l=document.getElementById('hist-list'); l.innerHTML=""; if(historyLog.length===0){l.innerHTML="<div style='text-align:center;color:#555;margin-top:50px;'>No history yet</div>";return;} historyLog.forEach(i=>{const d=document.createElement('div');d.className='hist-item';d.innerHTML=`<div class="hist-eq" style="color:#666;font-size:0.9rem;">${i.e} =</div><div class="hist-res">${i.r}</div>`;d.onclick=()=>{currentInput=i.r.toString();updateScreen("Loaded from History");document.getElementById('calc-history-panel').classList.remove('show');};l.appendChild(d);}); }
+    function clearHistory() { historyLog=[]; renderHistory(); }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="project-card" style="border-color: #f472b6; margin-top: 30px; margin-bottom: 30px;">
+    <div class="card-header">
+        <h3>Neon Calculator 🧮</h3>
+    </div>
+    
+    <p class="card-desc">
+        A fully functional standard calculator with a beautiful dark glassmorphism design, neon glow effects, and error handling.
+    </p>
+
+    <button onclick="openCalculator()" class="purple-btn" style="background-color: #f472b6; color: #500724; width: 100%; margin-top: 10px;">
+        Open Calculator ➕
+    </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="project-card" style="border-color: #00e5ff;">
+                <h3>Robiul Web Store 🛍️</h3>
+                <p>My official digital agency selling premium website templates. Features dark mode, animations, and WhatsApp checkout.</p>
+                
+                <a href="https://robiulstore.netlify.app/" target="_blank" class="btn project-btn" style="color: #00e border-color:00e5ff;">
+                    Visit Shop 🚀
+                </a>
+            </div>
+
+    
+    
+    
+    
+
+    <h2 class="section-title">YOUTUBE VIDEO </h2>
+    <div class="cert-container">
+            <img src="your-profile-image.jpg" alt="Full Stack Web Development Certificate" class="cert-img">
+        </a>
+        
+        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--accent-color);">
+        </p>
+
+    </div>
+</section>
+
+
+
+    
+        
+<div id="sky-engine">
+    <div id="sky-day"></div>
+    <div id="sky-sunset"></div>
+    <div id="sky-night">
+        <div id="stars"></div> </div>
+
+    <div id="sun-body"></div>
+    <div id="moon-body"></div>
+
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+</div>
+
+<style>
+    /* --- CORE CONTAINER --- */
+    #sky-engine {
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+        z-index: -9999; overflow: hidden; pointer-events: none;
+    }
+
+    /* --- SKY LAYERS --- */
+    #sky-day {
+        position: absolute; top:0; left:0; width:100%; height:100%;
+        background: linear-gradient(180deg, #2980b9, #6dd5fa, #ffffff);
+        opacity: 1; z-index: 1;
+    }
+    #sky-sunset {
+        position: absolute; top:0; left:0; width:100%; height:100%;
+        background: linear-gradient(180deg, #4b1d44, #fd746c, #ff9068);
+        opacity: 0; z-index: 2;
+    }
+    #sky-night {
+        position: absolute; top:0; left:0; width:100%; height:100%;
+        background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
+        opacity: 0; z-index: 3;
+    }
+
+    /* --- SUN & MOON --- */
+    #sun-body {
+        position: absolute; width: 100px; height: 100px;
+        background: radial-gradient(circle, #ffd200 20%, #f7971e 100%);
+        border-radius: 50%;
+        box-shadow: 0 0 60px rgba(255, 210, 0, 0.8);
+        top: 15%; left: 80%; /* Starting Position */
+        z-index: 4; transform: translate(0, 0);
+    }
+
+    #moon-body {
+        position: absolute; width: 80px; height: 80px;
+        background: radial-gradient(circle, #ffffff 30%, #ddd 100%);
+        border-radius: 50%;
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+        top: 120%; left: 20%; /* Hidden below initially */
+        z-index: 5;
+    }
+
+    /* --- REALISTIC STARS (CSS Generated) --- */
+    #stars {
+        width: 1px; height: 1px;
+        background: transparent;
+        box-shadow: 10vw 10vh #fff, 20vw 5vh #fff, 30vw 40vh #fff, 
+                    40vw 15vh #fff, 50vw 80vh #fff, 60vw 20vh #fff, 
+                    70vw 60vh #fff, 80vw 10vh #fff, 90vw 90vh #fff,
+                    15vw 65vh #fff, 25vw 85vh #fff, 35vw 35vh #fff;
+        opacity: 0.8;
+    }
+    /* Add more stars using a pseudo-element */
+    #stars::after {
+        content: " "; position: absolute; top: 0; left: 0; width: 2px; height: 2px;
+        background: transparent;
+        box-shadow: 5vw 50vh #fff, 15vw 20vh #fff, 85vw 80vh #fff, 
+                    55vw 10vh #fff, 95vw 40vh #fff, 45vw 60vh #fff;
+        opacity: 0.6;
+    }
+
+    /* --- REALISTIC CLOUDS (Soft Blur) --- */
+    .cloud {
+        position: absolute; background: #fff;
+        border-radius: 50%; opacity: 0.8;
+        filter: blur(20px); /* This creates the realistic "mist" look */
+        z-index: 6; animation: floatCloud 60s linear infinite;
+    }
+    .c1 { width: 300px; height: 100px; top: 10%; left: -300px; animation-duration: 45s; }
+    .c2 { width: 400px; height: 150px; top: 30%; left: -400px; animation-duration: 65s; animation-delay: -20s; opacity: 0.6; }
+    .c3 { width: 250px; height: 80px; top: 5%; left: -250px; animation-duration: 55s; animation-delay: -10s; }
+
+    @keyframes floatCloud {
+        from { transform: translateX(-50vw); }
+        to { transform: translateX(150vw); }
+    }
+</style>
+
+<script>
+    window.addEventListener("scroll", () => {
+        // 1. Get Scroll Percentage (0 to 1)
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        let scrollP = scrollTop / docHeight;
+        if (scrollP > 1) scrollP = 1;
+
+        // 2. Elements
+        const skySunset = document.getElementById('sky-sunset');
+        const skyNight = document.getElementById('sky-night');
+        const sun = document.getElementById('sun-body');
+        const moon = document.getElementById('moon-body');
+        const clouds = document.querySelectorAll('.cloud');
+
+        // 3. SKY COLORS LOGIC
+        // 0% - 50%: Day to Sunset
+        // 50% - 100%: Sunset to Night
+        if (scrollP < 0.5) {
+            // Day Phase
+            skySunset.style.opacity = scrollP * 2; // Fade in sunset
+            skyNight.style.opacity = 0;
+        } else {
+            // Night Phase
+            skySunset.style.opacity = 1 - ((scrollP - 0.5) * 2); // Fade out sunset
+            skyNight.style.opacity = (scrollP - 0.5) * 2; // Fade in Night
+        }
+
+        // 4. SUN MOVEMENT (Sets down)
+        // Starts at 15%, goes to 150% (below screen)
+        let sunPos = 15 + (scrollP * 150);
+        sun.style.top = sunPos + "%";
+
+        // 5. MOON MOVEMENT (Rises up)
+        // Starts at 120% (below screen), goes to 15%
+        let moonPos = 120 - (scrollP * 105);
+        moon.style.top = moonPos + "%";
+
+        // 6. CLOUD DARKENING (Clouds get dark at night)
+        let cloudBrightness = 150 - (scrollP * 200); // 255 is white, 55 is dark grey
+        clouds.forEach(c => {
+            c.style.background = `rgb(${cloudBrightness}, ${cloudBrightness}, ${cloudBrightness})`;
+        });
+    });
+</script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Robiul | The Story</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="logo">Robiul.Dev</div>
+            <div class="social-links">
+                <a href="index.html" class="nav-btn">⬅ Back Home</a>
+            </div>
+        </nav>
+
+        <section class="about-section">
+            <h1 class="section-title">My Story & Future Goals</h1>
+            
+            <div class="about-card">
+                <h3>🎬 The Dream: Cinema & Code</h3>
+                <p>
+                    I am a student from West Bengal with a unique ambition. 
+                    While I love technology, my ultimate dream is to become a <strong>Film Director</strong> 
+                    working in Japan or Europe.
+                </p>
+                <p>
+                    I am writing my own stories inspired by series like <em>Stranger Things</em> 
+                    and <em>Squid Game</em>. My goal is to create world-class web series 
+                    that mix sci-fi with deep storytelling.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="info-card">
+                    <h3>🎓 Education Plan</h3>
+                    <p>
+                        I plan to pursue a <strong>Bachelor of Computer Applications (BCA)</strong>. 
+                        I believe technology is the future of filmmaking, and having a strong 
+                        technical background will give me an edge as a director.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <h3>🚀 Why Web Development?</h3>
+                    <p>
+                        I am building my career as a Full Stack Developer to fund my own movies. 
+                        I don't want to wait for producers; I want to earn the capital to 
+                        produce my own "Proof of Concept" films and pitch them to Netflix.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-card" style="margin-top: 20px;">
+                <h3>🌏 The "Japan" Goal</h3>
+                <p>
+                    I have a deep interest in Japanese culture and real estate. 
+                    I am currently learning about international cinema and plan to 
+                    apply for film studies abroad after my graduation.
+                </p>
+            </div>
+
+
+
+
+        </section>
+
+        <br><br>
+        <footer><p>© 2026 Robiul Islam</p></footer>
+    </div>
+    
+    
+    
+    
+    
+<section class="contact-section">
+    <h2 class="section-title">Let's Work Together 🚀</h2>
+    
+    <div class="contact-container">
+        
+        <div class="contact-card whatsapp-card">
+            <div class="icon-glow">
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3>Quick Chat</h3>
+            <p>Need a website fast? Chat with me directly on WhatsApp.</p>
+            <a href="https://wa.me/8918331232" target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Chat Now
+            </a>
+        </div>
+
+        <div class="contact-card form-card">
+            <h3>Send a Message 📩</h3>
+            <form action="mailto:robiulislam786786u@gmail.com" method="post" enctype="text/plain">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <textarea name="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn-send">Send Message ✈️</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .contact-section {
+        padding: 50px 20px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* Glass Card Style */
+    .contact-card {
+        flex: 1;
+        min-width: 300px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 30px;
+        text-align: left;
+        transition: transform 0.3s;
+    }
+    .contact-card:hover { transform: translateY(-5px); }
+
+    /* WhatsApp Special Styling */
+    .whatsapp-card {
+        text-align: center;
+        border-top: 4px solid #25d366; /* WhatsApp Green */
+        background: linear-gradient(145deg, rgba(37, 211, 102, 0.1), rgba(0,0,0,0));
+    }
+    .icon-glow {
+        font-size: 3rem; color: #25d366;
+        margin-bottom: 15px;
+        text-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+    }
+    .btn-whatsapp {
+        display: inline-block;
+        background: #25d366; color: #000;
+        font-weight: bold; text-decoration: none;
+        padding: 12px 25px; border-radius: 30px;
+        margin-top: 15px;
+        transition: box-shadow 0.3s;
+    }
+    .btn-whatsapp:hover { box-shadow: 0 0 20px #25d366; }
+
+    /* Form Styling */
+    .form-card { border-top: 4px solid #c084fc; } /* Purple */
+    
+    .input-group { margin-bottom: 15px; }
+    
+    input, textarea {
+        width: 100%;
+        padding: 12px 15px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        color: #fff;
+        font-family: inherit;
+        outline: none;
+    }
+    input:focus, textarea:focus { border-color: #c084fc; }
+
+    .btn-send {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #c084fc, #818cf8);
+        border: none; border-radius: 10px;
+        color: white; font-weight: bold; cursor: pointer;
+        font-size: 1rem;
+        transition: opacity 0.3s;
+    }
+    .btn-send:hover { opacity: 0.9; }
+
+    h3 { margin-top: 0; color: #fff; margin-bottom: 10px; }
+    p { color: #aaa; font-size: 0.9rem; }
+</style>
+
+
+
+
+
+
+    
+
+<div id="weatherModal" class="modal-overlay">
+    <div class="modal-window weather-theme">
+        <div class="modal-header">
+            <span>Live Weather</span>
+            <button onclick="closeWeather()" class="close-modal">✕</button>
+        </div>
+        
+        <div class="weather-wrapper">
+            <div class="w-header">
+                <div class="w-badge"><i class="fa-solid fa-location-dot"></i> <span id="w-city">Locating...</span></div>
+            </div>
+
+            <div class="w-main">
+                <img id="w-icon" src="" class="w-icon-img" style="display:none">
+                <h1 id="w-temp">--°</h1>
+                <p id="w-desc">Loading...</p>
+            </div>
+
+            <div class="w-grid">
+                <div class="w-card">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div><span id="w-hum">--</span>%</div>
+                    <small>Humidity</small>
+                </div>
+                <div class="w-card">
+                    <i class="fa-solid fa-wind"></i>
+                    <div><span id="w-wind">--</span> km/h</div>
+                    <small>Wind</small>
+                </div>
+                <div class="w-card">
+                    <i class="fa-solid fa-sun"></i>
+                    <div id="w-uv">--</div>
+                    <small>UV Index</small>
+                </div>
+                <div class="w-card" id="w-aqi-card">
+                    <i class="fa-solid fa-lungs"></i>
+                    <div id="w-aqi">--</div>
+                    <small>AQI</small>
+                </div>
+            </div>
+            
+            <div class="w-footer">Data provided by Open-Meteo</div>
+        </div>
+        </div>
+</div>
+
+
+<footer class="portfolio-footer">
+    <p>
+        Developed by 
+        <a href="https://Robiul120.netlify.app" target="_blank" class="dev-link">
+            Robiul Islam
+        </a>
+    </p>
+    <p class="copyright">© 2026 All Rights Reserved</p>
+</footer>
+            
+            
+          
+
+
+
+
+<script>
+  atOptions = {
+    'key' : 'fa81d0890019f83720bb777a3fcd4618',
+    'format' : 'iframe',
+    'height' : 90,
+    'width' : 728,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/fa81d0890019f83720bb777a3fcd4618/invoke.js"></script>
